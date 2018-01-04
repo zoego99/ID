@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Interior Design</title>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<header>
+	<h1 id="logo"><img src="images/logo.png" width="30" height="60" alt=""/>Interior Design</h1>
+	<nav>
+		<a href="javascript:;">Living room</a>
+		<a href="javascript:;">Bedroom</a>
+		<a href="javascript:;">Service</a>
+		<a href="javascript:;">Contact</a>
+	</nav>
+</header>
+<div id="slider">
+	<div class="sliderTab">
+		<a href="javascript:;" class="on">Interior Design01</a><a href="javascript:;">Interior Design02</a><a href="javascript:;">Interior Design03</a><a href="javascript:;">Interior Design04</a><a href="javascript:;">Interior Design05</a>
+	</div>
+	<img class="on" src="images/slider01.jpg" alt="slider01">
+	<img src="images/slider02.jpg" alt="slider02">
+	<img src="images/slider03.jpg" alt="slider03">
+	<img src="images/slider04.jpg" alt="slider04">
+	<img src="images/slider05.jpg" alt="slider05">
+</div>
+	<section><h2>Living room Design</h2>
+	<img src="images/section0101.jpg" alt="section0101">
+	<img src="images/section0102.jpg" alt="section0102">
+	<img src="images/section0103.jpg" alt="section0103">
+	<img src="images/section0104.jpg" alt="section0104">
+	<img src="images/section0105.jpg" alt="section0105">
+	<img src="images/section0106.jpg" alt="section0106">
+	</section>
+	<section><h2>Bedroom design</h2>
+	<img src="images/section0201.jpg" alt="section0101">
+	<div>
+		<img src="images/section0202.jpg" alt="section0102">
+		<img src="images/section0203.jpg" alt="section0103">
+		<img src="images/section0204.jpg" alt="section0104">
+		<img src="images/section0205.jpg" alt="section0105">
+	</div>
+	</section>
+<section><h2>Service</h2>
+	<div id="serviceList">
+		<h3><img src="images/logo.png"  height="40" alt=""/>Interior Services</h3>
+		<p>item01</p>
+		<p>item02</p>
+		<p>item03</p>
+		<p>item04</p>
+		<p>item05</p>
+		<p>item06</p>
+		<p>item07</p>
+		<p>item08</p>
+	</div>
+  <div id="about">
+		<h3><img src="images/logo.png" height="40" alt=""/>Company Profile</h3>
+	  <img src="images/slider03.jpg" alt="slider03">
+	  <p><span class="page"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut tincidunt erat, nec egestas erat. Vivamus<a href="javascript:;" class="preview" data-prev="images/AD1.png" title="">室內設計Interior Design</a> volutpat est in lorem molestie sollicitudin. Pellentesque aliquet dignissim lectus, quis fringilla lectus blandit eu. Vivamus dignissim eros eget bi<a href="javascript:;" class="preview" data-prev="images/AD1.png" title="Title Notes1">室內設計Interior Design1</a>bendum laoreet. Phasellus vel cursus mi. Donec libero est, molestie nec lacus ut, faucibus sagittis sapien. Maecenas eu cursus urna. Aenean consectetur dui eu nunc viverra aliquet.</p>
+		<p>Curabitur non semper enim. Nunc ligula mi, scelerisque vel tortor vitae, placerat dictum risus. Cras urna arcu, hendrerit ornare venenatis et, porta at enim. Suspendisse ac est ultrices nibh imperdiet lobortis. Cras luctus lorem ac est lacinia, sit ame<a href="javascript:;" class="preview" data-prev="images/AD2.png" title="Title Notes2">室內設計Interior Design1</a>t dapibus nibh placerat. Fusce interdum ultricies purus. Cras malesuada laoreet dolor sed vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pulvinar orci felis, vitae hendrerit dui placerat at.</p>
+		<p>Mauris vulputate volutpat turpis id sodales. Donec tempus ligula et risus molestie ultrices. Cras luctus ultrices orci eget molestie. Integer vel nulla a lacus pharetra hendrerit. Fusce quis ligula varius, vehicula libero eget, bibendum sem. Fusce blandit varius lorem ac porttitor. Aliquam et diam metus. Aliquam erat volutpat.</p>
+	</div>
+</section>
+	<section><h2>Contact Form</h2>
+	<form id="contact-form" action="#" method="post" enctype="multipart/form-data">
+                          <fieldset>
+                            <label><span class="text-form">Name:</span>
+                              <input name="p1" type="text">
+                            </label>
+                            <label><span class="text-form">Email:</span>
+                              <input name="p2" type="text">
+                            </label>
+                            <label><span class="text-form">Phone:</span>
+                              <input name="p3" type="text">
+                            </label>
+                            <div class="wrapper">
+                              <div class="text-form">Message:</div>
+                              <textarea></textarea>
+                            </div>
+                            <div class="buttons"> <a class="button" href="javascript:;">Clear</a> <a class="button" href="javascript:;">Send</a> </div>
+                          </fieldset>
+                        </form>
+
+	</section>
+<div class="ADmenu"></div>
+<div class="gotop"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></div>
+<script>
+$(window).on('load', function(){
+//取得#slider 高度
+		var $sliderH = $('#slider>img').outerHeight();
+		$('#slider').css('height', $sliderH);
+		$('.sliderTab').css('bottom',0);
+//#slider
+		var $STa = $('.sliderTab a').hover(
+			function(){$(this).addClass('hover').siblings('.hover').removeClass('hover');
+						  var hoverIndex = $(this).index();
+						  var himgSrc = $('#slider>img').eq(hoverIndex).attr('src');
+		//				  alert(himgSrc);
+						  $(this).prepend('<img src="'+himgSrc +'" alt="" class="hoverimg" />').children('img').slideDown();
+					  }
+			,function(){$(this).removeClass('hover');
+						$(this).children().remove('img');
+					   }
+		).click(function(){
+			$(this).addClass('on').siblings('.on').removeClass('on');
+			$('#slider>img').eq($(this).index()).animate({opacity:1},1000)
+							.siblings('img').animate({opacity:0},500);
+		});
+
+//#slider 定時輪播
+		var _speed = 5000;
+		var timer=window.setTimeout(sliderTime,_speed);
+
+//#slider滑鼠移入時，停止輪播
+		$('#slider').hover(
+			function(){ window.clearTimeout(timer);}
+			,function(){ timer = window.setTimeout(sliderTime,_speed);}
+		);
+//#slider 輪播fn
+		function sliderTime(){
+			var $clickIndex = $('.sliderTab a.on').index();
+			$clickIndex = ($clickIndex+1) % $STa.length;
+			$STa.eq($clickIndex).click();
+			timer = window.setTimeout(sliderTime,_speed);
+		}
+
+//section 背景色彩
+	/*	var sectionBg = ['#e1f5fe','#fffde7','#e0f2f1',''];
+		$('section').each(function(i){
+			$(this).css('background-color',sectionBg[i]);
+		});
+	*/	
+//nav click 捲動至各頁
+		$('nav a').click(function(){
+			var $navIndex = $(this).index();
+	//		alert($navIndex);
+			var $sectionTop = $('section').eq($navIndex).offset().top;
+			$('html,body').animate({scrollTop:$sectionTop},1000);
+		});
+
+//.gotop 捲動至頂
+		$('.gotop').click(function(){
+			$('html,body').animate({scrollTop:0},1000);
+		});
+
+
+//AD click事件
+	var IO = true;
+	var $AD = $('.ADmenu').click(function () {
+		if (IO) {
+			$AD.animate({right:0,width:310,},1000,function(){$(this).css('background','url(images/AD2.png)')});
+		} else {
+			$AD.animate({right:0,width:80}, 1000,function(){$(this).css('background','url(images/AD1.png)')});
+		}
+		IO = !IO;
+	});
+
+//AD scroll事件
+	$(window).scroll(function(){
+			$AD.stop().animate({
+				top: $(this).scrollTop() + $AD.height(),
+			}, 800);
+	});
+
+	$(window).resize(function(){
+			//取得#slider 高度
+		var $sliderH = $('#slider>img').outerHeight();
+		$('#slider').css('height', $sliderH);
+	});
+    
+//加入隨身註解
+    //S1：了解滑鼠所在位置
+    $(document).mousemove(function(event){
+        $("span.page").text("X: " + event.pageX + ", Y: " + event.pageY);
+    });
+    
+    //S2：加入隨身註解
+    var $thisTitle ;
+    $("a.preview").hover(
+        function(e){	
+             $thisTitle = $(this).attr('title');
+     //       console.log($thisTitle);
+            $(this).attr('title','') ;
+            var c = ($thisTitle != "") ? '<span>' + $thisTitle +'</span>': "";
+            $("body").append('<p id="preview">'+ c +'<br><img src="'+ $(this).data('prev') +'"/></p>');
+
+       //確認視窗大小為避免物件超出範圍，顯示捲軸                           /*新增*/
+            var $targetW = $(window).width();
+            var $prevW = $("#preview").outerWidth(true);
+            var $prevLeft = e.pageX + 10;
+      //      console.log($targetW+'/'+$prevLeft+'/'+$prevW);
+            if($prevW+$prevLeft>=$targetW ){
+                $("#preview").css({top:e.pageY +10,right:0}).fadeIn();
+            }else{
+                $("#preview").css({top:e.pageY +10,left:e.pageX + 10}).fadeIn();
+            }
+
+        }
+        ,function(){
+            $("#preview").remove();
+            $(this).attr('title',$thisTitle);
+        });
+});//load END
+</script>
+</body>
+</html>

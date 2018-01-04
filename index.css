@@ -1,0 +1,114 @@
+/* CSS Document */
+
+*{padding: 0; margin: 0;}
+ul,ol,li{ list-style: none;}
+a{text-decoration: none;}
+body{ font-family: Verdana, "微軟正黑體", "sans-serif"; font-size: 16px;
+		background: #eeeeee;}
+/*header=========================================================================*/
+header{ height: 80px;}
+#logo{margin-left: 30px; margin-top: 20px; float: left;
+		font-size: 24px;}
+#logo img,section h3>img{vertical-align: middle; margin-right: 10px; height: 40px; width: auto;}
+nav{position: absolute; right: 100px; top: 0;line-height: 80px;}
+nav a{ padding: 0 10px; color: #323232; padding-bottom: 10px; transition: all .3s;}
+nav a:hover{ color: #000000; border-bottom: 3px solid #000000;}
+
+/*slider=========================================================================*/
+#slider{ position: relative;}
+#slider>img{ display: block; width: 100%; height: auto;
+			position: absolute; top: 0; left: 0;opacity: 0;}
+#slider>img:nth-of-type(1){ opacity: 1;}
+.sliderTab{position: absolute; bottom: 0; left: 0;
+			width: 100%; height: 50px; background:rgba(0,0,0,0.4); z-index: 99;}
+.sliderTab a{color: #EFAF00; text-align: center; line-height: 50px; display: inline-block;
+			width:20%;border-right: 1px solid #f57c00; box-sizing: border-box;
+			position: relative;}
+.sliderTab a:last-child{border-right: none;}
+/*.sliderTab a:hover,*/.sliderTab .on{ background:#EFAF00; color:#fff;text-shadow: 1px 1px #000;}
+/*.sliderTab a:hover:before, */.sliderTab .on:before{content: '';
+					border-bottom: 10px solid #EFAF00;
+					border-left:10px solid transparent; border-right:10px solid transparent;
+					position: absolute; top: -9px; left: 50%; margin-left: -10px;}
+
+.sliderTab a.hover{position: relative;}
+.sliderTab .hoverimg{width:200px; height: 60px; border-radius: 10px; box-shadow: 1px 1px 3px #000; border: 1px solid #fff;
+					 position: absolute; top: -75px; left: 50%; margin-left: -100px;}
+
+/*section=========================================================================*/
+section{min-height: 100vh;}
+section:nth-of-type(3){min-height:inherit;}
+section:nth-of-type(4){background: url(images/contact.jpg) right bottom no-repeat #fdfbfa;}
+section h2{ text-align: center; font-size:30px; line-height:80px; color:#EFAF00;text-shadow: 1px 1px #000; width: 100%;}
+section:nth-of-type(1){display: flex; flex-wrap: wrap; justify-content: space-around;}
+section:nth-of-type(1) img{ width:400px ; height: 230px; margin: 10px;}
+
+section:nth-of-type(2){display: flex; flex-wrap: wrap;}
+section:nth-of-type(2)>img{width:30%; height: 700px;}
+section:nth-of-type(2) div{display: flex; flex-wrap: wrap; width: 70%;}
+section:nth-of-type(2) div>img{width: 50%; height:350px;}
+
+section:nth-of-type(3){ overflow: hidden;padding: 30px; box-sizing: border-box;}
+#serviceList{width: 30%; float: left; }
+#serviceList h3{ padding-bottom: 30px;}
+#serviceList p{line-height: 40px; border-bottom: 1px solid #272727; margin-right: 30px; cursor: pointer;}
+#serviceList p:before{content: ''; border-left: 5px solid #272727; display: inline-block; margin:0 10px; 						border-top: 5px solid transparent; border-bottom:5px solid transparent; }
+#serviceList p:hover{color:#EFAF00;  text-shadow: 1px 1px #000;}
+#serviceList p:hover:before{border-left: 5px solid #EFAF00;}
+#about{ width: 70%; float: left;}
+#about>img{width: 400px; height: auto; float: left; margin: 20px; border: 5px solid #fff; box-shadow: 1px 1px 3px #000;}
+#about p{}
+
+
+
+/*contact-form=========================================================================*/
+fieldset{width: 60%; border: none; padding: 20px;}
+#contact-form {
+	display:block
+}
+#contact-form label { display:block;	height:40px; overflow:hidden }
+#contact-form input {
+	float:left;
+	width:406px; font-size:13px; color:#262626;
+	padding:6px 10px; margin:0; border:1px solid #d9d9d9;	background:#fcfcfc; }
+#contact-form textarea {
+	float:left;
+	height:192px; overflow:auto; width:776px; font-size:13px;
+	color:#404040; padding:6px 10px; margin:0;
+	border:1px solid #d9d9d9; background:#fcfcfc; }
+.wrapper{overflow: hidden;}
+.text-form {
+	float:left;
+	display:block;	font-size:13px; width:81px;	color:#262626;
+	padding-top:3px
+}
+.buttons { text-align: center; margin: 10px;}
+.buttons a { display: inline-block; width: 100px; height:40px; background:#EFAF00; line-height: 40px; }
+
+/*.gotop=========================================================================*/
+.gotop{ position: fixed; bottom: 30px; right: 30px;
+		width: 60px; height: 60px; line-height: 60px; text-align: center;
+		background: rgba(65,64,64,0.6); text-shadow: 1px 1px #000;color: #fff;
+		border-radius: 10px; cursor: pointer;
+}
+
+
+/*.ADmenu=========================================================================*/
+	.ADmenu{ z-index: 101;
+			width:80px; height:300px; background:url(images/AD1.png);
+			position:absolute; right: 0; bottom:20px; cursor: pointer;
+		}
+
+/*.preview=========================================================================*/
+.preview,span.page {
+    color: #c40808; font-weight: bolder; font-size: 24px;
+}    
+#preview{
+    position:absolute;           /*為程式中加入定位*/  
+    display:none;                /*預先隱藏，當滑鼠靠近再顯示*/
+}
+#preview span {
+    display: block; 
+    color:#ffffff; text-align: center; font-weight: bolder; 
+    background: #a80663; line-height: 30px;
+}    
